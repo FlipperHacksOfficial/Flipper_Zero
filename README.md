@@ -4,7 +4,7 @@ Welcome to the EvilPortal section dedicated to Flipper Zero! This repository con
 
 ## ⚠️ Disclaimer
 
-**All scripts and tools provided in this repository are strictly for educational purposes and ethical penetration testing only.** Misuse of any information or resources provided here is strictly prohibited. By using these resources, you agree to use them responsibly and ethically. Always have explicit permission before engaging in any penetration testing activities.
+**All resources provided are strictly for educational purposes and ethical penetration testing only.** Misuse of any information or resources provided here is strictly prohibited. By using these resources, you agree to use them responsibly and ethically. Always have explicit permission before engaging in any penetration testing activities.
 
 ## Contribution
 
